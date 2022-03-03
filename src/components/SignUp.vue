@@ -49,6 +49,7 @@
     </div>
 </template>
 <script>
+import SignInVue from './SignIn.vue';
 export default {
     name: 'SignUp',
     data: function() {
@@ -75,8 +76,9 @@ export default {
             this.validation_indicators[0] = !this.validateFirstName(this.first_name);
             this.validation_indicators[1] = !this.validateEmail(this.email_address);
             this.validation_indicators[2] = !this.validatePassword(this.password);
+            
             if (this.validation_indicators.every((bool) => !bool)) {
-                
+                this.$router.push({name: 'signin', params: {first_name : this.first_name, email_address : this.email_address}});
             }
         },
         resetValidationIndicator: function(ind) {

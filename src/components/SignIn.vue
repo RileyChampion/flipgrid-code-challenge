@@ -2,10 +2,10 @@
     <div id="sign-in__container" class="card">
         <div class="sign-in__title-container">
             <h3>Welcome</h3>
-            <h2><strong>{First Name}!</strong></h2>
+            <h2><strong>{{first_name}}!</strong></h2>
             <p>You have been registered for this awesome service. Please check your email listed below for instructions.</p>
             <div class="sign-in__email-container">
-                <p><strong>{email}</strong></p>
+                <p><strong>{{email_address}}</strong></p>
             </div>
         </div>
         <div class="form-submit">
@@ -23,6 +23,10 @@ export default {
         }
     },
     methods: {},
+    created() {
+        this.first_name = this.$route.params.first_name;
+        this.email_address = this.$route.params.email_address;
+    },
 }
 </script>
 <style lang="css">

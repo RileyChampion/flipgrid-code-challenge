@@ -8,12 +8,14 @@ const router = createRouter({
     {
       path: '/',
       name: 'signup',
-      component: SignUpView
+      component: SignUpView,
+      props: true
     },
     {
       path: '/success',
       name: 'signin',
-      component: SignInView
+      component: SignInView,
+      props: true
     },
     
   ]
