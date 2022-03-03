@@ -126,7 +126,7 @@ export default {
         margin: 3px 0 0;
     }
     
-    .form-submit button {
+    .form-submit-button {
         background: #ff1b33;
         border: none;
         border-radius: 5px;
@@ -138,10 +138,10 @@ export default {
         cursor: pointer;
         border: 2px solid transparent;
     }
-    .form-submit button:hover {
+    .form-submit-button:hover {
         background: #e20118;
     }
-    .form-submit button:active {
+    .form-submit-button:active {
         background: #ac0011;
         border-color: rgb(255, 63, 82);
     }
