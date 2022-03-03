@@ -85,6 +85,7 @@ h1,h2,h3,h4,h5 {
 }
 
 body {
+  margin: 0;
   min-height: 100vh;
   background-color: var(--color-background);
   font-family: 'Arimo', sans-serif;
@@ -95,9 +96,16 @@ body {
 }
 
 .card{
+  max-width: 360px;
   background-color: var(--color-white);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0px 0px 5px 3px #cccccc;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 3px #d7d7d7;
+}
+
+@media only screen and (max-width: 450px) {
+  .card{
+    margin: 0 10px;
+  }
 }
 
