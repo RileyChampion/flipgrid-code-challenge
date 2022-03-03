@@ -1,4 +1,12 @@
-/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --color-background: #f6f6f6;
+  --color-button: #ff361c;
+  --color-white: #ffffff;
+  --color-text: #000;
+}
+
+/* color palette from <https://github.com/vuejs/theme>
+
 :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -21,7 +29,7 @@
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 }
 
-/* semantic color variables for this project */
+
 :root {
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
@@ -71,4 +79,25 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+h1,h2,h3,h4,h5 {
+  margin: 0;
 }
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-background);
+  font-family: 'Arimo', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text);
+}
+
+.card{
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px #cccccc;
+}
+
