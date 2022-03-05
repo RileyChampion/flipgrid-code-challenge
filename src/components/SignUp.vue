@@ -72,7 +72,6 @@ export default {
             return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input);
         },
         validatePassword: function(input) {
-            console.log(input, input != "");
             return input != ""
         },
         signUpButtonPressed: function(e) {
