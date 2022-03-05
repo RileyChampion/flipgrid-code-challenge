@@ -10,6 +10,7 @@
         >
             <div class="form-field">
                 <label class="form-label" for="first-name">First Name</label>
+                <div class="form-error-message-no-show" :class="{'form-error-message-show' : validation_indicators[0]}">The entered first name is invalid.</div>
                 <input 
                     class="form-input" 
                     :class="{'invalid-input' : validation_indicators[0]}"
@@ -21,6 +22,7 @@
             </div>
             <div class="form-field">
                 <label class="form-label" for="email-address">Email Address</label>
+                <div class="form-error-message-no-show" :class="{'form-error-message-show' : validation_indicators[1]}">The entered email address is invalid.</div>
                 <input 
                     class="form-input" 
                     :class="{'invalid-input' : validation_indicators[1]}"
@@ -32,6 +34,7 @@
             </div>
             <div class="form-field">
                 <label class="form-label" for="password">Password</label>
+                <div class="form-error-message-no-show" :class="{'form-error-message-show' : validation_indicators[2]}">The entered password cannot be empty.</div>
                 <input 
                     class="form-input" 
                     :class="{'invalid-input' : validation_indicators[2]}" 
@@ -62,7 +65,7 @@ export default {
     },
     methods: {
         validateFirstName: function(input) {
-            return /^[a-z,.'-]+$/.test(input);
+            return /^[a-zA-Z,.'-]+$/.test(input);
         },
         validateEmail: function(input) {
             // according to https://www.w3resource.com/javascript/form/email-validation.php
@@ -146,6 +149,20 @@ export default {
     .form-submit-button:active {
         background: #ac0011;
         border-color: rgb(255, 63, 82);
+    }
+
+    .form-error-message-no-show {
+        display: none;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    }
+    .form-error-message-show {
+        display: block !important;
+        opacity: 1 !important;
+        transition: all 200ms ease-in-out;
+        font-size: 0.85em;
+        margin-bottom: 10px;
+        color: #ff3535;
     }
     
     /* Ids */
